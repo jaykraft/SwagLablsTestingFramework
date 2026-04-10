@@ -17,7 +17,7 @@ public class DriverFactory {
             options.addArguments("--headless");
             options.addArguments("--no-sandbox");
             options.addArguments("--disable-dev-shm-usage");
-            
+
             driver = new ChromeDriver();
         } else if (browser.equalsIgnoreCase("edge")) {
             driver = new EdgeDriver();
