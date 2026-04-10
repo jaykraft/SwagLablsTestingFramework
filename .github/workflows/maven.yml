@@ -28,8 +28,8 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
-
+      working-directory: SwagLabs
+      run: mvn clean test
     - name: Download a Build Artifact
       uses: actions/download-artifact@v4
       with:
