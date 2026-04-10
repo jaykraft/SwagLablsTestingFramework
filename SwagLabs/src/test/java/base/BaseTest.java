@@ -20,11 +20,6 @@ public class BaseTest {
 
     @AfterMethod
     public void tearDown(ITestResult result){
-
-        if (ITestResult.FAILURE == result.getStatus()) {
-            ScreenshotUtils.capturScreenshot(driver, result.getName());
-        }
-
         DriverFactory.quitDriver();
     }
 
