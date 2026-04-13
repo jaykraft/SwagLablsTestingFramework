@@ -28,7 +28,7 @@ jobs:
         distribution: 'temurin'
     - name: Build with Maven
       working-directory: SwagLabs
-      run: mvn clean test
+      run: mvn clean test -U
     - name: Upload Test Report
       if: always()
       uses: actions/upload-artifact@v4
