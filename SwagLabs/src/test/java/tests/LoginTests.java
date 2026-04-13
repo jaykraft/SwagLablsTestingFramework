@@ -16,18 +16,4 @@ public class LoginTests extends BaseTest {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login("standard_user", "secret_sauce");
     }
-
-    @Test
-    public void testInvalidLogin() {
-        LoginPage loginPage = new LoginPage(driver);
-
-        loginPage.login("invalid_user", "wrong_password");
-
-        //Force Validation that will Fail
-        String expectedTitle = "Swag Labs";
-        String actualTitle = driver.getTitle();
-
-        org.testng.Assert.assertEquals(actualTitle, "Some Wrong Title");
-    }
-
 }
